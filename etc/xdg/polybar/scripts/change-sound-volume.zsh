@@ -12,7 +12,6 @@ case "$1" in
     wpctl set-mute @DEFAULT_SINK@ toggle
     ;;
   *)
-    echo "Usage: $0 {increase|decrease|toggle}"
     ;;
 esac
 
