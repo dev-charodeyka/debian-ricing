@@ -12,13 +12,13 @@ else
   CONNECTED_DEVICES=$(bluetoothctl devices Connected | awk '{print $2}')
   
   if [[ -z "$CONNECTED_DEVICES" ]]; then
-    # No devices connected
-    echo "%{F#ffca85}" # Bluetooth is on but no device is connected
+    # bluetooth is on but no device is connected
+    echo "%{F#ffca85}"
   elif [[ "$CONNECTED_DEVICES" == "$HEADSET_MAC" ]]; then
     # if ONLY my headset is connected
-    echo "%{F#61ffca}󰥰" # Headset connected
+    echo "%{F#61ffca}󰥰" 
   else
     # if something ELSE is connected
-    echo "%{F#a277ff}󰂴" # More than one device connected
+    echo "%{F#a277ff}󰂴"
   fi
 fi
